@@ -4,7 +4,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 @Data
-public class PokemonSpritesOtherDreamWorld {
+public class Other {
+
     @JsonProperty(value="dream_world")
-    private PokemonSpritesOtherDreamWorldFrontDefault otherDreamWorld;
+    private DreamWorld dreamWorld;
 }

@@ -25,7 +25,7 @@ public class PokemonController {
         return pokemonService.getPokemon();
     }
 
-    @GetMapping("/randomPokemon")
+    @GetMapping("/questionPokemon")
     public PokemonQuestionModel getQuestions(){
         return pokemonService.getQuestion();
     }
