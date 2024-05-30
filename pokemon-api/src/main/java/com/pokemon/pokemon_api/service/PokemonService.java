@@ -54,9 +54,11 @@ public class PokemonService {
 
     public PokemonVerificationModel verifyPokemon(Integer actualId, String selectedName) {
         String actualName = pokeApiClient.getPokemonForID(actualId).getName();
+        PokemonModel actualPokemon = pokeApiClient.getPokemonForID(actualId);
+        String actualImg = actualPokemon.getSprites().getOther().getDreamWorld().getFrontDefault();
         return PokemonVerificationModel.builder()
-                .id(actualId)
                 .name(actualName)
+                .imgSrc(actualImg)
                 .isPokemonAMatch(selectedName.equalsIgnoreCase(actualName))
                 .build();
     }

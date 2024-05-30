@@ -6,7 +6,7 @@ import lombok.Data;
 @Data
 @Builder
 public class PokemonVerificationModel {
-    Integer id;
     String name;
+    String imgSrc;
     Boolean isPokemonAMatch;
 }
